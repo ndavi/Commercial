@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Presentation\FAddCommande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\FAddCommande.Designer.cs">
+      <DependentUpon>FAddCommande.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\Fclient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
     </Compile>
     <Compile Include="Presentation\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentation\FAddCommande.resx">
+      <DependentUpon>FAddCommande.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Fclient.resx">
       <DependentUpon>Fclient.cs</DependentUpon>
     </EmbeddedResource>
