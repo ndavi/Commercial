@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,14 +45,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Fcommercial.cs">
+    <Compile Include="Presentation\Fclient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Fcommercial.Designer.cs">
+    <Compile Include="Presentation\Fclient.Designer.cs">
+      <DependentUpon>Fclient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Fcommercial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Fcommercial.Designer.cs">
       <DependentUpon>Fcommercial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Presentation\FListeCdes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\FListeCdes.Designer.cs">
+      <DependentUpon>FListeCdes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentation\Fclient.resx">
+      <DependentUpon>Fclient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Fcommercial.resx">
+      <DependentUpon>Fcommercial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\FListeCdes.resx">
+      <DependentUpon>FListeCdes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -73,6 +95,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MesErreurs\MesErreurs.csproj">
+      <Project>{a89de01b-6f76-4d73-9387-b19635e24f7d}</Project>
+      <Name>MesErreurs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Metier\Metier.csproj">
+      <Project>{f56c1047-935e-4aec-8a92-7dc09dff9fb5}</Project>
+      <Name>Metier</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilitaires\Utilitaires.csproj">
+      <Project>{3485b413-bafd-4e3d-a52b-9b81998709ce}</Project>
+      <Name>Utilitaires</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
